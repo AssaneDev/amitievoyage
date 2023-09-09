@@ -1,5 +1,5 @@
 <?php 
-require __DIR__.'/database/conexion.php';
+require_once __DIR__.'/database/conexion.php';
 $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 
 $listProgramme = $programmeDB->fetchAll();
