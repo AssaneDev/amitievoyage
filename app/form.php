@@ -50,7 +50,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 		'region'=>FILTER_SANITIZE_SPECIAL_CHARS,
 		'prix'=>FILTER_SANITIZE_NUMBER_INT,
 		'nombrejour'=>FILTER_SANITIZE_SPECIAL_CHARS,
-		'categorie'=>FILTER_SANITIZE_SPECIAL_CHARS,
+		'category'=>FILTER_SANITIZE_SPECIAL_CHARS,
 		'types'=>FILTER_SANITIZE_SPECIAL_CHARS,
 		'image'=>FILTER_SANITIZE_URL,
 		'canva'=>FILTER_SANITIZE_URL,
@@ -63,7 +63,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 	$region = $_POST['region'];
 	$prix = $_POST['prix'];
 	$nombredejour = $_POST['nombrejour'];
-	$category = $_POST['categorie'];
+	$category = $_POST['category'];
 	$types = $_POST['types'];
 	$image = $_POST['image'];
 	$canva = $_POST['canva'];
@@ -243,9 +243,9 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="categorie">Categorie</label>
-													<input type="text" class="form-control" name="categorie" id="categorie" placeholder="Categorie" value="<?=$category ?? '' ?>">
-													<?php if($errors['categorie']): ?>
-                                                           <h6 style="color: red;"><?= $errors['categorie'] ?></h6>
+													<input type="text" class="form-control" name="category" id="categorie" placeholder="Categorie" value="<?=$category ?? '' ?>">
+													<?php if($errors['category']): ?>
+                                                           <h6 style="color: red;"><?= $errors['category'] ?></h6>
 													<?php endif; ?>
 												</div>
 											</div>
