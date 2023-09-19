@@ -6,3 +6,28 @@
 .rlr-product-card__footer{
     margin-top: 20px;
 }
+.btn-modif{
+    padding: 0.3rem;
+    border-radius: 5px;
+    background-color: #560c63;
+    color: white;
+    border: none;
+}
+.btn-supprim{
+    padding: 0.3rem;
+    border-radius: 5px;
+    background-color: #780c0c;
+    color: white;
+    border: none;
+}
+.but{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+a{
+    font-style: none;
+    text-decoration: none;
+    color: white;
+    
+  }

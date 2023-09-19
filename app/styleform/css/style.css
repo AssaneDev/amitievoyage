@@ -8313,3 +8313,13 @@ textarea.form-control {
   display: none;
   font-size: 16px;
   font-weight: bold; }
+.liste{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  
+}
+.menu{
+  padding: 10px;
+}
+  

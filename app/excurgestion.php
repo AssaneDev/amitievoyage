@@ -107,8 +107,14 @@
                       </ul>
                     </div>
                   </div>
+                  <div class="but">
+                  <button class="btn-modif"> <a href="/form.php?id=<?=$Excursion['idprogramme']?>"> Modifier</a> </button>
+                  <button class="btn-supprim"><a href="/delete.php/?id=<?=$Excursion['idprogramme']?>"> Supprimer </a></button>
+                  </div>
+                
+
                   <!-- Product card link -->
-                  <a href="<?=$Excursion['canva']?>" target="_blank" class="rlr-product-card__anchor"></a>
+                  <!-- <a href="<?=$Excursion['canva']?>" target="_blank" class="rlr-product-card__anchor"></a> -->
                 </article>
               </div>
              <?php endforeach; ?>
