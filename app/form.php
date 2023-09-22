@@ -20,7 +20,10 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
  ];
 
    $_GET = filter_input_array(INPUT_GET,FILTER_SANITIZE_SPECIAL_CHARS);
-    $idprogramme = $_GET['id'];
+    $idprogramme = $_GET['id'] ?? '';
+
+	// var_dump($idprogramme);
+	// exit;
 
 	if($idprogramme){
 		$programme = $programmeDB->ModifOne($idprogramme);
