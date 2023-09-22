@@ -256,10 +256,10 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 												<div class="form-group">
 													<label class="label" for="types">Types</label>
 													 <select name="types" id="types" >
-														<option <?=!$types || $types ==='Excursion' ? 'selected' : '' ?> value="Excursion">Excursion</option>
-														<option <? $types === 'Mini-Circuit' ? 'selected' : '' ?> value="Mini-circuit">Mini-circuit</option>
-														<option <? $types === 'Circuit' ? 'selected' : '' ?> value="Circuit">Circuit</option>
-														<option <? $types === 'Culturel' ? 'selected' : '' ?> value="Culturel">Culturel</option>
+														<option  value="Excursion">Excursion</option>
+														<option  value="Mini-circuit">Mini-circuit</option>
+														<option  value="Circuit">Circuit</option>
+														<option value="Culturel">Culturel</option>
 
 
 													 </select>
