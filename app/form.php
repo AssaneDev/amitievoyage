@@ -203,7 +203,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 				      		<div id="form-message-success" class="mb-4">
 				            Programme Ajouter avec Succés!
 				      		</div>
-									<form  action="/form.php<?= $idprogramme ? "/?id=$idprogramme" : '' ?>" method="POST" >
+									<form  action="/form.php<?= $idprogramme ? "?id=$idprogramme" : '' ?>" method="POST" >
 									
 										<div class="row">
 											<div class="col-md-6">
