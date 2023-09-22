@@ -20,7 +20,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
  ];
 
    $_GET = filter_input_array(INPUT_GET,FILTER_SANITIZE_SPECIAL_CHARS);
-    $idprogramme = $_GET['id'] ?? '';
+    $idprogramme = $_GET['id'];
 
 	if($idprogramme){
 		$programme = $programmeDB->ModifOne($idprogramme);
@@ -50,7 +50,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 		'region'=>FILTER_SANITIZE_SPECIAL_CHARS,
 		'prix'=>FILTER_SANITIZE_NUMBER_INT,
 		'nombrejour'=>FILTER_SANITIZE_SPECIAL_CHARS,
-		'category'=>FILTER_SANITIZE_SPECIAL_CHARS,
+		'category'=>FILTER_SANITIZE_FULL_SPECIAL_CHARS,
 		'types'=>FILTER_SANITIZE_SPECIAL_CHARS,
 		'image'=>FILTER_SANITIZE_URL,
 		'canva'=>FILTER_SANITIZE_URL,
@@ -253,10 +253,10 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 												<div class="form-group">
 													<label class="label" for="types">Types</label>
 													 <select name="types" id="types" >
-														<option value="Excursion">Excursion</option>
-														<option value="Mini-circuit">Mini-circuit</option>
-														<option value="Circuit">Circuit</option>
-														<option value="Circuit">Culturel</option>
+														<option <?=!$types || $types ==='Excursion' ? 'selected' : '' ?> value="Excursion">Excursion</option>
+														<option <? $types === 'Mini-Circuit' ? 'selected' : '' ?> value="Mini-circuit">Mini-circuit</option>
+														<option <? $types === 'Circuit' ? 'selected' : '' ?> value="Circuit">Circuit</option>
+														<option <? $types === 'Culturel' ? 'selected' : '' ?> value="Culturel">Culturel</option>
 
 
 													 </select>
