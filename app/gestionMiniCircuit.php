@@ -1,7 +1,7 @@
 <?php 
   require __DIR__.'/database/conexion.php';
   $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
-  $Circuit = 'Circuit';
+  $Circuit = 'Mini-Circuit';
   $programmeCircuit = $programmeDB->selectOne($Circuit);
 
 //   echo"<pre>";

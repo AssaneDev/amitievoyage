@@ -34,6 +34,9 @@
             <li class="navigation-item ">
               <a class="navigation-link" href="excursions.php">Excursion</a>
             </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="minicircuit.php">Mini-Circuits</a>
+            </li>
             <!-- Dropdown menu 1 -->
             <li class="navigation-item">
               <a class="navigation-link" href="circuit.php">Circuits</a>

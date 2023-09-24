@@ -185,6 +185,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 			</div>
 			 <ul class="liste">
 				<li class="menu"><a href="excurgestion.php">Gestion Excursion</a></li>
+				<li class="menu"><a href="gestionMiniCircuit.php">Gestion Mini-Circuit</a></li>
 				<li class="menu"><a href="circuitgestion.php">Gestion Gestion Circuit</a></li>
 
 			 </ul>
@@ -256,10 +257,10 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 												<div class="form-group">
 													<label class="label" for="types">Types</label>
 													 <select name="types" id="types" >
-														<option  value="Excursion">Excursion</option>
-														<option  value="Mini-circuit">Mini-circuit</option>
-														<option  value="Circuit">Circuit</option>
-														<option value="Culturel">Culturel</option>
+														<option <?=!$types || $types ==='Excursion' ? 'selected' : ''?> value="Excursion">Excursion</option>
+														<option <?= $types ==='Mini-Circuit' ? 'selected' : ''?> value="Mini-circuit">Mini-circuit</option>
+														<option <?= $types ==='Circuit' ? 'selected' : ''?>  value="Circuit">Circuit</option>
+														<option <?= $types ==='Culturel' ? 'selected' : ''?> value="Culturel">Culturel</option>
 
 
 													 </select>
