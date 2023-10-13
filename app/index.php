@@ -244,14 +244,15 @@ $programmeculturel= $programmeDB->selectOne($culture);
                   </button>
                 </div>
               </div>
-              <div style="position: relative; width: 100%; height: 0; padding-top: 83.8298%;
+              <div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
   <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFRXFL2Bvw&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwaD8UvJs&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFRXFL2Bvw&#x2F;view?utm_content=DAFRXFL2Bvw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+            <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwaD8UvJs&#x2F;view?utm_content=DAFwaD8UvJs&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
+            <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFRXFL2Bvw&#x2F;view?utm_content=DAFRXFL2Bvw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
             </div>
           </div>
         </div>
@@ -269,11 +270,14 @@ $programmeculturel= $programmeDB->selectOne($culture);
               <span class="rlr-section__title--sub">Visiter le Sénégal en entier avec Nos Circuits sur mesures!</span>
             </div>
             <div class="button-row">
-              <a href="./search-results--left-sidebar.html" class="btn rlr-button rlr-button--large rlr-button--rounded rlr-button--brand"> Voir Circuits </a>
+              <a href="./circuit.php" class="btn rlr-button rlr-button--large rlr-button--rounded rlr-button--brand"> Voir Circuits </a>
             </div>
           </div>
           <div class="row rlr-featured__cards">
+          <?php $i = 0 ?>
             <?php foreach ($programmecircuits as $cir):?>
+              <?php $i++ ?>
+              <?php if ($i < 4):?>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-offset="250" data-aos-duration="700">
               <!-- Featured prodcut card -->
               <article class="rlr-product-card rlr-product-card--featured" itemscope itemtype="https://schema.org/Product">
@@ -287,8 +291,8 @@ $programmeculturel= $programmeDB->selectOne($culture);
                   <span class="rlr-badge rlr-badge--right rlr-badge-- rlr-badge--abs rlr-badge--abs-right"> 4.9 </span>
                   <div class="rlr-product-card--featured__body card-img-overlay">
                     <div class="rlr-product-card--featured__duration">
-                      <p class="body"><?=$cir['nombredejour']?> Jours</p>
-                      <h4 class="type-h4"><?=$cir['prix']?> €</h4>
+                      <p class="body rlr-button--brand rlr-button--rounded" style="color: black;"><?=$cir['nombredejour']?> Jours</p>
+                      <h4 class="type-h4 rlr-button--brand rlr-button--rounded" style="color: black;"><?=$cir['prix']?> €</h4>
                     </div>
                     <div class="rlr-product-detail-header__actions">
                       <div class="rlr-product-detail-header__button-wrapper">
@@ -297,7 +301,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
                         </button>
                         <span class="rlr-product-detail-header__helptext rlr-js-helptext"></span>
                       </div>
-                      <a href="https://www.canva.com/design/DAFIubaItvc/wqlqFd70hFPIT5ZLyQN3RA/view?website#2" class="btn rlr-button product-card-buttonrlr-button--medium rlr-button--rounded rlr-button--brand"> Explorez </a>
+                      <a href="<?=$cir['canva']?>"  class="btn rlr-button product-card-buttonrlr-button--medium rlr-button--rounded rlr-button--brand"> Explorez </a>
                     </div>
                   </div>
                 </div>
@@ -309,12 +313,33 @@ $programmeculturel= $programmeDB->selectOne($culture);
                 <p class="type-body"><?=$cir['description']?></p>
               </div>
             </div>
+            <?php endif; ?>
             <?php endforeach;?>
           </div>
         </div>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
+          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+          border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+              src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwavqaI_Q&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+            </iframe>
+      </div>
       </section>
+           <!-- Loisir -->
+           <div style="position: relative; width: 100%; height: 0; padding-top: 70.7071%;
+                padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                border-radius: 8px; will-change: transform;">
+                  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwaY0ZmGE&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                  </iframe>
+            </div>
+  
+       <!-- Loisir -->
+    
+
+
       <!-- Logo Carousel -->
-      <section id="features" class="rlr-section rlr-section__mb landding__plugin">
+      <!-- <section id="features" class="rlr-section rlr-section__mb landding__plugin">
         <div class="container">
           <div class="rlr-logos-slider">
             <div class="rlr-logos-slider__items">
@@ -356,7 +381,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     <?= include_once 'include/footer.php'?>
     <!-- Scripts -->
     <script src="./vendors/navx/js/navigation.min.js" defer></script>

@@ -42,7 +42,7 @@
               <a class="navigation-link" href="circuit.php">Circuits</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="./home-page.html"> Tourisme Culturel </a>
+              <a class="navigation-link" href="culturel.php"> Tourisme Culturel </a>
             </li>
             <!-- Dropdown menu 2 -->
             <li class="navigation-item">
