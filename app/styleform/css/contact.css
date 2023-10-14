@@ -9,6 +9,7 @@
   }
   
   .contact-form {
+    flex: 50px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -51,4 +52,7 @@
   .contact-form button:hover {
     background: red;
   }
-  
+  .contact{
+    display: flex;
+    flex-direction: row;
+  }

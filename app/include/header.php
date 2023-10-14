@@ -50,7 +50,7 @@
             </li>
             <!-- Dropdown menu 2 -->
             <li class="navigation-item">
-              <a class="navigation-link" href="./contact.html"> Contact </a>
+              <a class="navigation-link" href="./contact.php"> Contact </a>
             </li>
           </ul>
           
