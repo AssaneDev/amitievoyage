@@ -17,7 +17,7 @@
             <div class="navigation-brand-text">
               <div class="rlr-logo rlr-logo__navbar-brand rlr-logo--default">
                 <a href="./index.html">
-                  <img src="./assets/svg/amitie.png" style="width:400px; height:200px" alt="#" class="" />
+                  <img src="./assets/svg/amitie.png" style="width:200px; height:75px" alt="#" class="" />
                 </a>
               </div>
             </div>
