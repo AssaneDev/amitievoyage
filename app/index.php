@@ -7,7 +7,8 @@ $Excursion = 'Excursion';
 $circuit = 'Circuit';
 $minicircuit = 'Mini-circuit';
 $culture = 'Culturel';
-
+   $_GET = filter_input_array(INPUT_GET,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+  $lang = $_GET['lang'] ?? '';
 
 $programmeExcursions = $programmeDB->selectOne($Excursion);
 $programmeMiniCircuit = $programmeDB->selectOne($minicircuit);
@@ -22,7 +23,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang='<?=$lang?>'>
   <head>
       <?= require_once 'include/head.php'?>
       <link rel="stylesheet" href="/styleform/css/index.css">
@@ -48,7 +49,14 @@ $programmeculturel= $programmeDB->selectOne($culture);
                   </div>
                   <article class="rlr-banner-splide__content-wrapper">
                     <header class="rlr-banner-splide__header">
-                      <h2 class="rlr-banner-splide__slogan"> Découvrez Le Sénégal </h2>
+                     <?php 
+                        if ($lang==="en") {
+                          echo '<h2 class="rlr-banner-splide__slogan"> Discover Senegal </h2>';
+                        }elseif($lang==="fr") {
+                          echo '<h2 class="rlr-banner-splide__slogan"> Découvrez Le Sénégal </h2>';
+                        }
+                      ?>
+                      
                       <span class="rlr-banner-splide__sub-title">Amitie Voyage</span>
                     </header>
                     <div class="rlr-banner-splide__content-desc">
@@ -65,7 +73,14 @@ $programmeculturel= $programmeDB->selectOne($culture);
                       <div class="rlr-banner-splide__payment-option">
                         <span> <i class="rlr-icon-font flaticon-credit-cards-payment"> </i> </span>
                         <div class="rlr-banner-splide__content-desc-right">
-                          <a href="./product-detail-page.html" class="btn rlr-button rlr-banner-splide__book-now"> Réservez! </a>
+                          
+                          <?php 
+                        if ($lang==="en") {
+                          echo '<a href="./contact.php" class="btn rlr-button rlr-banner-splide__book-now"> Booking! </a>';
+                        }elseif($lang==="fr") {
+                          echo '<a href="./contact.php" class="btn rlr-button rlr-banner-splide__book-now"> Réservez! </a>';
+                        }
+                      ?>
                         </div>
                       </div>
                     </div>
@@ -78,8 +93,16 @@ $programmeculturel= $programmeDB->selectOne($culture);
                   </div>
                   <article class="rlr-banner-splide__content-wrapper">
                     <header class="rlr-banner-splide__header">
-                      <h2 class="rlr-banner-splide__slogan">Ecologie - Découverte - Culture </h2>
-                      <span class="rlr-banner-splide__sub-title">Immersion Total </span>
+                    <?php 
+                        if ($lang==="en") {
+                          echo '<h2 class="rlr-banner-splide__slogan">Ecology - Discovery - Culture </h2>';
+                          echo '<span class="rlr-banner-splide__sub-title">Total Immersion </span>';
+                        }elseif($lang==="fr") {
+                          echo '<h2 class="rlr-banner-splide__slogan">Ecologie - Découverte - Culture </h2>';
+                          echo '<span class="rlr-banner-splide__sub-title">Immersion Total </span>';
+                        }
+                      ?>
+                      
                     </header>
                     <div class="rlr-banner-splide__content-desc">
                       <div class="rlr-banner-splide__temperature">
@@ -96,7 +119,13 @@ $programmeculturel= $programmeDB->selectOne($culture);
                       <div class="rlr-banner-splide__payment-option">
                         <span> <i class="rlr-icon-font flaticon-credit-cards-payment"> </i> </span>
                         <div class="rlr-banner-splide__content-desc-right">
-                          <a href="./product-detail-page.html" class="btn rlr-button rlr-banner-splide__book-now"> Reservez! </a>
+                        <?php 
+                        if ($lang==="en") {
+                          echo '<a href="./contact.php" class="btn rlr-button rlr-banner-splide__book-now"> Booking! </a>';
+                        }elseif($lang==="fr") {
+                          echo '<a href="./contact.php" class="btn rlr-button rlr-banner-splide__book-now"> Réservez! </a>';
+                        }
+                      ?>
                         </div>
                       </div>
                     </div>
@@ -118,8 +147,15 @@ $programmeculturel= $programmeDB->selectOne($culture);
               <div class="rlr-section-header">
                 <!-- Section heading -->
                 <div class="rlr-section__title">
-                  <h2 class="rlr-section__title--main">Programme Privative</h2>
-                  <span class="rlr-section__title--sub">Visiter le sénégal selon votre planing! Programme Idéals pour vos vancances d'entreprise</span>
+                <?php 
+                        if ($lang==="en") {
+                          echo '<h2 class="rlr-section__title--main">Private Program</h2>';
+                          echo '<span class="rlr-section__title--sub">Visit Senegal according to your plan! Ideal program for your corporate vacation</span>';
+                        }elseif($lang==="fr") {
+                          echo '<h2 class="rlr-section__title--main">Programme Privative</h2>';
+                          echo ' <span class="rlr-section__title--sub">Visiter le sénégal selon votre planing! Programme Idéals pour vos vancances d\'entreprise</span>';
+                        }
+                      ?>
                 </div>
                 <div class="button-row">
                   <button type="button" class="btn rlr-button button button--previous rlr-button--carousel" aria-label="Previous">
@@ -228,8 +264,16 @@ $programmeculturel= $programmeDB->selectOne($culture);
               <div class="rlr-section-header">
                 <!-- Section heading -->
                 <div class="rlr-section__title">
-                  <h2 class="rlr-section__title--main">Plusieurs Categorie de Programme</h2>
-                  <span class="rlr-section__title--sub">Amitie Voyage vous propose different programmes selon vos gout!</span>
+                  
+                <?php 
+                        if ($lang==="en") {
+                          echo '<h2 class="rlr-section__title--main">Several Program Categories</h2>';
+                          echo '<span class="rlr-section__title--sub">Amitie Voyage offers you different programs according to your tastes!</span>';
+                        }elseif($lang==="fr") {
+                          echo '<h2 class="rlr-section__title--main">Plusieurs Categories de Programmes</h2>';
+                          echo ' <span class="rlr-section__title--sub">Amitie Voyage vous propose differents programmes selon vos gout!</span>';
+                        }
+                ?>
                 </div>
                 <div class="button-row">
                   <button type="button" class="btn rlr-button button button--previous rlr-button--carousel" aria-label="Previous">
@@ -244,15 +288,31 @@ $programmeculturel= $programmeDB->selectOne($culture);
                   </button>
                 </div>
               </div>
-              <div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwaD8UvJs&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-            <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwaD8UvJs&#x2F;view?utm_content=DAFwaD8UvJs&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
-            <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFRXFL2Bvw&#x2F;view?utm_content=DAFRXFL2Bvw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+
+              <?php 
+                        if ($lang==="en") {
+                          echo '<div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
+                          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                          border-radius: 8px; will-change: transform;">
+                           <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                             src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFxmQoH_iY&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                           </iframe>
+                         </div>';
+                     
+                        }elseif($lang==="fr") {
+                          echo '<div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
+                          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                         border-radius: 8px; will-change: transform;">
+                           <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                                  src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwaD8UvJs&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                             </iframe>
+                   </div>';
+                          
+                        }
+                ?>
+
+              
+           
             </div>
           </div>
         </div>
@@ -266,7 +326,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
           <div class="rlr-section-header">
             <!-- Section heading -->
             <div class="rlr-section__title">
-              <h2 class="rlr-section__title--main">Meuilleurs Circuits</h2>
+              <h2 class="rlr-section__title--main"> Circuit au Sénégal</h2>
               <span class="rlr-section__title--sub">Visiter le Sénégal en entier avec Nos Circuits sur mesures!</span>
             </div>
             <div class="button-row">
@@ -386,5 +446,6 @@ $programmeculturel= $programmeDB->selectOne($culture);
     <!-- Scripts -->
     <script src="./vendors/navx/js/navigation.min.js" defer></script>
     <script src="./js/main.js" defer></script>
+    <script src="./js/traduction.js" defer></script>
   </body>
 </html>

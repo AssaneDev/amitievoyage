@@ -86,9 +86,8 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 		$errors['region'] = ERROR_REQUIRED;
 	}
     
-	if (!$prix) {
-		$errors['prix'] = ERROR_REQUIRED;
-	}elseif(!filter_var($prix,FILTER_VALIDATE_INT)){
+	
+	if(!filter_var($prix,FILTER_VALIDATE_INT)){
 		$errors['prix'] = ERROR_INT;
 	}
 	if (!$nombredejour) {
@@ -186,7 +185,9 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 			 <ul class="liste">
 				<li class="menu"><a href="excurgestion.php">Gestion Excursion</a></li>
 				<li class="menu"><a href="gestionMiniCircuit.php">Gestion Mini-Circuit</a></li>
-				<li class="menu"><a href="circuitgestion.php">Gestion Gestion Circuit</a></li>
+				<li class="menu"><a href="circuitgestion.php"> Gestion Circuit</a></li>
+				<li class="menu"><a href="gestionCulture.php"> Gestion Culture</a></li>
+
 
 			 </ul>
 			<div class="row justify-content-center">

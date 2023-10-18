@@ -52,7 +52,13 @@
             <li class="navigation-item">
               <a class="navigation-link" href="./contact.php"> Contact </a>
             </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="?lang=en"> Anglais </a>
+              <!-- -->
+              <a class="navigation-link" href="?lang=fr"> français </a>
+
+            </li>
           </ul>
-          
+         
         </div>
       </nav>
