@@ -3,8 +3,16 @@
         <div class="container">
           <!-- Section heading -->
           <div class="rlr-section__title rlr-section__title--centered">
-            <h2 class="rlr-section__title--main">Vous avez une question?</h2>
-            <span class="rlr-section__title--sub">Notre service est disponible 24h/24 7jours/7!</span>
+          <?php 
+                        if ($lang==="en") {
+                          echo '<h2 class="rlr-section__title--main">You have a question?</h2>';
+                          echo '<span class="rlr-section__title--sub">Our service is available 24/7!</span>';
+                        }elseif($lang==="fr") {
+                          echo '<h2 class="rlr-section__title--main">Vous avez une question?</h2>';
+                          echo ' <span class="rlr-section__title--sub">Notre service est disponible 24h/24 7jours/7 !</span>';
+                        }
+          ?>
+
           </div>
           <div class="row">
             <div class="offset-lg-1 col-lg-5" data-aos="fade-down-right" data-aos-duration="700" data-aos-once="true">
@@ -13,10 +21,21 @@
                   <div class="rlr-support-card__img-wrapper">
                     <img src="./assets/svg/headset.svg" alt="headset" />
                   </div>
-                  <h2 class="rlr-support-card__title">Pour Reservez </h2>
-                  <p class="rlr-support-card__subtitle rlr-support-card__text">Envoyez nous un Email ouAppelez nous!</p>
-                  <p class="rlr-support-card__text">reservez@amitievoyage.sn</p>
-                  <p class="rlr-support-card__text">(+221)77 646 66 70</p>
+                  <?php 
+                        if ($lang==="en") {
+                          echo '<h2 class="rlr-support-card__title">For Booking </h2>';
+                          echo '<p class="rlr-support-card__subtitle rlr-support-card__text">Send us an Email or Call us!</p>';
+                          echo '<p class="rlr-support-card__text">reservez@amitievoyage.fr</p>';
+                          echo '<p class="rlr-support-card__text">(+221)77 646 66 70</p>';
+
+                        }elseif($lang==="fr") {
+                          echo '<h2 class="rlr-support-card__title">Pour Reservez </h2>';
+                          echo '<p class="rlr-support-card__subtitle rlr-support-card__text">Envoyez nous un Email ouAppelez nous!</p>';
+                          echo '<p class="rlr-support-card__text">reservez@amitievoyage.sn</p>';
+                          echo '<p class="rlr-support-card__text">(+221)77 646 66 70</p>';
+                        }
+                    ?>
+              
                 </div>
               </div>
             </div>
@@ -26,10 +45,21 @@
                   <div class="rlr-support-card__img-wrapper">
                     <img src="./assets/svg/help-circle.svg" alt="headset" />
                   </div>
-                  <h2 class="rlr-support-card__title">Aide &amp; Support</h2>
-                  <p class="rlr-support-card__subtitle rlr-support-card__text">Vous avez des question contactez nous ici!</p>
-                  <p class="rlr-support-card__text">support@amitievoyage.sn</p>
-                  <p class="rlr-support-card__text">33 957 59 19</p>
+                  <?php 
+                        if ($lang==="en") {
+                          echo '<h2 class="rlr-support-card__title">Help &amp; Support </h2>';
+                          echo '<p class="rlr-support-card__subtitle rlr-support-card__text">You have any questions contact us here!</p>';
+                          echo '<p class="rlr-support-card__text">reservez@amitievoyage.fr</p>';
+                          echo '<p class="rlr-support-card__text">33 957 59 19</p>';
+
+                        }elseif($lang==="fr") {
+                          echo '<h2 class="rlr-support-card__title">Aide &amp; Support </h2>';
+                          echo '<p class="rlr-support-card__subtitle rlr-support-card__text">Vous avez des question contactez nous ici !</p>';
+                          echo '<p class="rlr-support-card__text">support@amitievoyage.fr</p>';
+                          echo '<p class="rlr-support-card__text">33 957 59 19</p>';
+                        }
+                    ?>
+                 
                 </div>
               </div>
             </div>
@@ -42,12 +72,32 @@
       <div class="container">
         <div class="rlr-footer__getintouch">
           <div class="rlr-footer__getintouch_col rlr-footer__getintouch__col--title">
-            <h4>Vous Aimez Voyager</h4>
-            <p>Les aventures du sénégal vous appel!</p>
+          <?php 
+                        if ($lang==="en") {
+                          echo '<h4>You like to travel</h4>';
+                          echo '<p>The adventures of Senegal are calling you!</p>';
+                
+
+                        }elseif($lang==="fr") {
+                          echo '<h4>Vous Aimez Voyager</h4>';
+                          echo '<p>Les aventures du sénégal vous appel!</p>';
+                        }
+            ?>
+         
           </div>
           <div class="rlr-footer__getintouch_col rlr-footer__getintouch__col--address">
-            <h4>Nos Locaux</h4>
-            <a href="#">Saly, Dakar</a>
+          <?php 
+                        if ($lang==="en") {
+                          echo '<h4>Our offices</h4>';
+                          echo '<a href="#">Saly, Dakar</a>';
+                
+
+                        }elseif($lang==="fr") {
+                          echo '<h4>Nos Locaux</h4>';
+                          echo '<a href="#">Saly, Dakar</a>';
+                        }
+            ?>
+            
           </div>
         </div>
         <!-- Footer menu -->
@@ -56,6 +106,15 @@
         <div class="rlr-footer__legal">
           <div class="rlr-footer__legal__row rlr-footer__legal__row--top">
             <div class="rlr-footer__legal__row__col">
+            <?php 
+                        if ($lang==="en") {
+                          echo ' <a href="#">Our Travel Rules</a>';
+                
+
+                        }elseif($lang==="fr") {
+                          echo ' <a href="#">Nos Régles de Voyages</a>';
+                        }
+            ?>
               <a href="#">Nos Régles de Voyages</a>
             </div>
             <!-- Footer social links -->

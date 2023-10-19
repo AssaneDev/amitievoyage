@@ -1,14 +1,21 @@
 <?php 
+
 require_once __DIR__.'/database/conexion.php';
-$programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
+$_GET = filter_input_array(INPUT_GET,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$lang = $_GET['lang'] ?? 'fr';
+if ($lang === 'fr'){
+  $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
+}elseif($lang === 'en'){
+  $programmeDB = require_once __DIR__.('/database/models/programmeEnglish.php');
+};
+
 
 $listProgramme = $programmeDB->fetchAll();
 $Excursion = 'Excursion';
 $circuit = 'Circuit';
 $minicircuit = 'Mini-circuit';
 $culture = 'Culturel';
-   $_GET = filter_input_array(INPUT_GET,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-  $lang = $_GET['lang'] ?? '';
+  
 
 $programmeExcursions = $programmeDB->selectOne($Excursion);
 $programmeMiniCircuit = $programmeDB->selectOne($minicircuit);
@@ -23,7 +30,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
 
 ?>
 <!DOCTYPE html>
-<html lang='<?=$lang?>'>
+<html lang='<?=isset($lang) ? $lang : 'fr'?>'>
   <head>
       <?= require_once 'include/head.php'?>
       <link rel="stylesheet" href="/styleform/css/index.css">
@@ -326,8 +333,16 @@ $programmeculturel= $programmeDB->selectOne($culture);
           <div class="rlr-section-header">
             <!-- Section heading -->
             <div class="rlr-section__title">
-              <h2 class="rlr-section__title--main"> Circuit au Sénégal</h2>
-              <span class="rlr-section__title--sub">Visiter le Sénégal en entier avec Nos Circuits sur mesures!</span>
+            <?php 
+                        if ($lang==="en") {
+                          echo '<h2 class="rlr-section__title--main">Tour in Senegal</h2>';
+                          echo '<span class="rlr-section__title--sub">Visit Senegal in its entirety with our tailor-made tours!!</span>';
+                        }elseif($lang==="fr") {
+                          echo '<h2 class="rlr-section__title--main">Circuit au Sénégal</h2>';
+                          echo ' <span class="rlr-section__title--sub">Visiter le Sénégal en entier avec Nos Circuits sur mesures!!</span>';
+                        }
+                ?>
+
             </div>
             <div class="button-row">
               <a href="./circuit.php" class="btn rlr-button rlr-button--large rlr-button--rounded rlr-button--brand"> Voir Circuits </a>
@@ -377,22 +392,63 @@ $programmeculturel= $programmeDB->selectOne($culture);
             <?php endforeach;?>
           </div>
         </div>
-        <div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
-          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-          border-radius: 8px; will-change: transform;">
-            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-              src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwavqaI_Q&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-            </iframe>
-      </div>
+
+        <?php 
+                        if ($lang==="en") {
+                          echo '<div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
+                          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                          border-radius: 8px; will-change: transform;">
+                           <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                             src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFxnEi_b5g&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                           </iframe>
+                         </div>';
+                     
+                        }elseif($lang==="fr") {
+                          echo '<div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
+                          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                          border-radius: 8px; will-change: transform;">
+                           <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                             src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwavqaI_Q&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                           </iframe>
+                         </div>
+                        
+                        ';
+                          
+                        }
+                ?>
+
+
+        
       </section>
            <!-- Loisir -->
-           <div style="position: relative; width: 100%; height: 0; padding-top: 70.7071%;
-                padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-                border-radius: 8px; will-change: transform;">
-                  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwaY0ZmGE&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-                  </iframe>
-            </div>
+           
+
+            <?php 
+                        if ($lang==="en") {
+                          echo '<div style="position: relative; width: 100%; height: 0; padding-top: 70.7071%;
+                          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                          border-radius: 8px; will-change: transform;">
+                           <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                             src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFxnMWyGqA&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                           </iframe>
+                         </div>
+                        
+                       ';
+                     
+                        }elseif($lang==="fr") {
+                          echo '<div style="position: relative; width: 100%; height: 0; padding-top: 70.7071%;
+                          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                          border-radius: 8px; will-change: transform;">
+                            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                              src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwaY0ZmGE&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                            </iframe>
+                      </div>
+
+                        
+                        ';
+                          
+                        }
+                ?>
   
        <!-- Loisir -->
     

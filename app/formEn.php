@@ -1,6 +1,6 @@
 <?php
 require __DIR__.'/database/conexion.php';
-$programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
+$programmeDB = require_once __DIR__.('/database/models/programmeEnglish.php');
  const ERROR_TO_SHORT = 'Contenue trop court';
  const ERROR_REQUIRED = 'Veuillez remplire ce champs';
  const ERROR_URL ='Url Inconrect';
@@ -179,7 +179,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Espace Admin AVS</h2>
+					<h2 class="heading-section">WELCOM TO AVS ENGLISH VERSION</h2>
 				</div>
 			</div>
 			 <ul class="liste">
@@ -187,7 +187,8 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 				<li class="menu"><a href="gestionMiniCircuit.php">Gestion Mini-Circuit</a></li>
 				<li class="menu"><a href="circuitgestion.php"> Gestion Circuit</a></li>
 				<li class="menu"><a href="gestionCulture.php"> Gestion Culture</a></li>
-				<li style="background-color: red; color: white;" class="menu"><a href="formEn.php"> Version Anglais</a></li>
+				
+
 
 
 			 </ul>
@@ -206,7 +207,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 				      		<div id="form-message-success" class="mb-4">
 				            Programme Ajouter avec Succés!
 				      		</div>
-									<form  action="/form.php<?= $idprogramme ? "?id=$idprogramme" : '' ?>" method="POST" >
+									<form  action="/formEn.php<?= $idprogramme ? "?id=$idprogramme" : '' ?>" method="POST" >
 									
 										<div class="row">
 											<div class="col-md-6">

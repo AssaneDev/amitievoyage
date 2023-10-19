@@ -1,16 +1,24 @@
 <?php 
   require __DIR__.'/database/conexion.php';
+  $_GET = filter_input_array(INPUT_GET,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+  $lang = $_GET['lang'] ?? 'fr';
+if ($lang === 'fr'){
   $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
   $Excursion = 'Excursion';
-  $programmeExcursions = $programmeDB->selectOne($Excursion);
-
+ 
+}elseif($lang === 'en'){
+  $programmeDB = require_once __DIR__.('/database/models/programmeEnglish.php');
+  $Excursion = 'Excursion';
+ 
+};
+$programmeExcursions = $programmeDB->selectOne($Excursion);
 //   echo"<pre>";
 //      var_dump($programmeExcursions);
 //   echo"</pre>";
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang='<?=isset($lang) ? $lang : 'fr'?>'>
   <head>
       <?= require_once 'include/head.php'?>
       <link rel="stylesheet" href="/styleform/css/index.css">
