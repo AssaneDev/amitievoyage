@@ -1,6 +1,16 @@
 <?php
 require __DIR__.'/database/conexion.php';
-$programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
+$_GET = filter_input_array(INPUT_GET,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+  $lang = $_GET['lang'] ?? 'fr';
+if ($lang === 'fr'){
+	$programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
+	
+   
+  }elseif($lang === 'en'){
+	$programmeDB = require_once __DIR__.('/database/models/programmeEnglish.php');
+	
+   
+  };
  const ERROR_TO_SHORT = 'Contenue trop court';
  const ERROR_REQUIRED = 'Veuillez remplire ce champs';
  const ERROR_URL ='Url Inconrect';
@@ -22,15 +32,12 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
    $_GET = filter_input_array(INPUT_GET,FILTER_SANITIZE_SPECIAL_CHARS);
     $idprogramme = $_GET['id'] ?? '';
 
-	// var_dump($idprogramme);
-	// exit;
+	
 
 	if($idprogramme){
 		$programme = $programmeDB->ModifOne($idprogramme);
-		// echo "<pre>";
-        // var_dump($modif);
-        // echo "</pre>";
-		// exit;
+	 
+
 		foreach ($programme as $excur) {
 			$intituler = $excur['intituler'];
 			$region = $excur['region'];
@@ -87,9 +94,9 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
 	}
     
 	
-	if(!filter_var($prix,FILTER_VALIDATE_INT)){
-		$errors['prix'] = ERROR_INT;
-	}
+	// if(!filter_var($prix,FILTER_VALIDATE_INT)){
+	// 	$errors['prix'] = ERROR_INT;
+	// }
 	if (!$nombredejour) {
 		$errors['nombredejour'] = ERROR_REQUIRED;
 	}
@@ -161,7 +168,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeDB.php');
  }
 ?>
 <!doctype html>
-<html lang="en">
+<html lang='<?=isset($lang) ? $lang : 'fr'?>'>
   <head>
   	<title>Avs Admin</title>
     <meta charset="utf-8">

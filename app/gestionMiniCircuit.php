@@ -78,8 +78,37 @@ if ($lang === 'fr'){
                         <a href="#" class="rlr-icon-text rlr-icon-text--anchor rlr-icon-text__anchor rlr-product-card__icon-text"> <i class="rlr-icon-font flaticon-check"> </i> <span class="rlr-postcard__tag">Road Trip </span> </a> -->
                       </div>
                       <div class="but">
-                  <button class="btn-modif"> <a href="/form.php?id=<?=$circuits['idprogramme']?>"> Modifier</a> </button>
-                  <button class="btn-supprim"><a href="/delete.php?id=<?=$circuits['idprogramme']?>"> Supprimer </a></button>
+                      <?php
+                     if ($lang==='en') {
+                      $xexo = $circuits['idprogramme'];
+                      $btn = ' <button class="btn-modif"> ';
+                      $btn1 = 'modify</a> </button>';
+                      $test = '<a href="/formEn.php?id=';
+                      $fr = '">';
+                      echo $btn.$test.$xexo.$fr.$btn1;
+
+                      $xexo = $circuits['idprogramme'];
+                      $btn = ' <button class="btn-modif"> ';
+                      $btn1 = 'Delete</a> </button>';
+                      $test = '<a href="/deleted.php?id=';
+                      $fr = '">';
+                      echo $btn.$test.$xexo.$fr.$btn1;
+                     } else{
+                      $xexo = $circuits['idprogramme'];
+                      $btn = ' <button class="btn-modif"> ';
+                      $btn1 = 'modifier</a> </button>';
+                      $test = '<a href="/form.php?id=';
+                      $fr = '">';
+                      echo $btn.$test.$xexo.$fr.$btn1;
+
+                      $xexo = $circuits['idprogramme'];
+                      $btn = ' <button class="btn-modif"> ';
+                      $btn1 = 'Supprimer</a> </button>';
+                      $test = '<a href="/delete.php?id=';
+                      $fr = '">';
+                      echo $btn.$test.$xexo.$fr.$btn1;
+                     }
+                  ?>
                   </div>
                     </div>
                   </div>

@@ -14,8 +14,8 @@ if ($lang === 'fr'){
   
   $programmeExcursions = $programmeDB->selectOne($Excursion);
 
-//   echo"<pre>";
-//      var_dump($programmeExcursions);
+//  echo"<pre>";
+//     var_dump($programmeExcursions);
 //   echo"</pre>";
 
 ?>
@@ -117,9 +117,41 @@ if ($lang === 'fr'){
                       </ul>
                     </div>
                   </div>
+
                   <div class="but">
-                  <button class="btn-modif"> <a href="/form.php?id=<?=$Excursion['idprogramme']?>"> Modifier</a> </button>
-                  <button class="btn-supprim"><a href="/delete.php?id=<?=$Excursion['idprogramme']?>"> Supprimer </a></button>
+                    
+                  <?php
+                     if ($lang==='en') {
+                      $xexo = $Excursion['idprogramme'];
+                      $btn = ' <button class="btn-modif"> ';
+                      $btn1 = 'modify</a> </button>';
+                      $test = '<a href="/formEn.php?id=';
+                      $fr = '">';
+                      echo $btn.$test.$xexo.$fr.$btn1;
+
+                      $xexo = $Excursion['idprogramme'];
+                      $btn = ' <button class="btn-modif"> ';
+                      $btn1 = 'Delete</a> </button>';
+                      $test = '<a href="/deleted.php?id=';
+                      $fr = '">';
+                      echo $btn.$test.$xexo.$fr.$btn1;
+                     } else{
+                      $xexo = $Excursion['idprogramme'];
+                      $btn = ' <button class="btn-modif"> ';
+                      $btn1 = 'modifier</a> </button>';
+                      $test = '<a href="/form.php?id=';
+                      $fr = '">';
+                      echo $btn.$test.$xexo.$fr.$btn1;
+
+                      $xexo = $Excursion['idprogramme'];
+                      $btn = ' <button class="btn-modif"> ';
+                      $btn1 = 'Supprimer</a> </button>';
+                      $test = '<a href="/delete.php?id=';
+                      $fr = '">';
+                      echo $btn.$test.$xexo.$fr.$btn1;
+                     }
+                  ?>
+                  
                   </div>
                 
 

@@ -34,8 +34,8 @@ class programmeEnglishDB {
             )');
             $this->statementSelectAll = $pdo->prepare('SELECT * FROM programmeEnglish');
             $this->statementSelectOne = $pdo->prepare('SELECT * FROM programmeEnglish WHERE types=:types');
-            $this->statementModifOne = $pdo->prepare('SELECT * FROM programmeEnglish WHERE idprogrammeEnglish=:idprogrammeEnglish');
-            $this->statementDeleteOne = $pdo->prepare('DELETE FROM programmeEnglish WHERE idprogrammeEnglish=:idprogrammeEnglish');
+            $this->statementModifOne = $pdo->prepare('SELECT * FROM programmeEnglish WHERE idprogramme=:idprogramme');
+            $this->statementDeleteOne = $pdo->prepare('DELETE FROM programmeEnglish WHERE idprogramme=:idprogramme');
 
             $this->statementUpdateOne = $pdo->prepare('UPDATE programmeEnglish SET 
                 intituler=:intituler,
@@ -48,7 +48,7 @@ class programmeEnglishDB {
                 canva=:canva,
                 description=:description
 
-                WHERE idprogrammeEnglish=:idprogrammeEnglish
+                WHERE idprogramme=:idprogramme
             ');
 
 
@@ -80,8 +80,8 @@ class programmeEnglishDB {
 
    }
 
-   public function ModifOne($idprogrammeEnglish){
-    $this->statementModifOne->bindValue(':idprogrammeEnglish',$idprogrammeEnglish);
+   public function ModifOne($idprogramme){
+    $this->statementModifOne->bindValue(':idprogramme',$idprogramme);
     $this->statementModifOne->execute();
     return $this->statementModifOne->fetchAll();
    }
@@ -96,17 +96,17 @@ class programmeEnglishDB {
     $this->statementUpdateOne->bindValue(':images',$programmeEnglish['images']);
     $this->statementUpdateOne->bindValue(':canva',$programmeEnglish['canva']);
     $this->statementUpdateOne->bindValue(':description',$programmeEnglish['description']);
-    $this->statementUpdateOne->bindValue(':idprogrammeEnglish',$programmeEnglish['idprogrammeEnglish']);
+    $this->statementUpdateOne->bindValue(':idprogramme',$programmeEnglish['idprogramme']);
    
 
     $this->statementUpdateOne->execute();
     return $programmeEnglish;
    }
 
-   public function DeleteOne($idprogrammeEnglish){
-      $this->statementDeleteOne->bindValue(':idprogrammeEnglish',$idprogrammeEnglish);
+   public function DeleteOne($idprogramme){
+      $this->statementDeleteOne->bindValue(':idprogramme',$idprogramme);
       $this->statementDeleteOne->execute();
-      return $idprogrammeEnglish;
+      return $idprogramme;
    }
 
 }

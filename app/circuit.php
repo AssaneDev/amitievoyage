@@ -94,7 +94,7 @@ if ($lang === 'fr'){
                     <div class="rlr-product-card__footer " style="margin-top: 10px;">
                         
                       <!-- <a href="#" class="rlr-icon-text rlr-icon-text--anchor rlr-icon-text__anchor rlr-product-card__icon-text"> <i class="rlr-icon-font flaticon-comment-left"> </i> <span class="rlr-postcard__replies">5 Replies </span> </a> -->
-                      <div class="rlr-icon-text rlr-product-card__icon-text"><i class="rlr-icon-font flaticon-three-o-clock-clock"> </i> <span class=""><?=$circuits['nombredejour']?> Jours</span></div>
+                      <div class="rlr-icon-text rlr-product-card__icon-text"><i class="rlr-icon-font flaticon-three-o-clock-clock"> </i> <span class=""><?=$circuits['nombredejour']?></span></div>
                       <div class="rlr-product-card__icon-text-list">
                         <a href="<?=$circuits['canva']?>" class="rlr-icon-text rlr-icon-text--anchor rlr-icon-text__anchor rlr-product-card__icon-text"> <i class="rlr-icon-font flaticon-check"> </i> <span class="rlr-postcard__tag"><?=$circuits['category']?> </span> </a>
                         <!-- <a href="#" class="rlr-icon-text rlr-icon-text--anchor rlr-icon-text__anchor rlr-product-card__icon-text"> <i class="rlr-icon-font flaticon-check"> </i> <span class="rlr-postcard__tag">Mountain </span> </a>

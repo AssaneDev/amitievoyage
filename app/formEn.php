@@ -87,9 +87,9 @@ $programmeDB = require_once __DIR__.('/database/models/programmeEnglish.php');
 	}
     
 	
-	if(!filter_var($prix,FILTER_VALIDATE_INT)){
-		$errors['prix'] = ERROR_INT;
-	}
+	// if(!filter_var($prix,FILTER_VALIDATE_INT)){
+	// 	$errors['prix'] = ERROR_INT;
+	// }
 	if (!$nombredejour) {
 		$errors['nombredejour'] = ERROR_REQUIRED;
 	}
@@ -161,7 +161,7 @@ $programmeDB = require_once __DIR__.('/database/models/programmeEnglish.php');
  }
 ?>
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
   	<title>Avs Admin</title>
     <meta charset="utf-8">
