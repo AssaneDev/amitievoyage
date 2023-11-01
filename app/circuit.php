@@ -82,13 +82,13 @@ if ($lang === 'fr'){
                   <div class="image-container  clazyload "  style="background-image: url(<?=$circuits['images']?>);"></div>
                   <div class="rlr-postcard__summary">
                     <!-- <span class="rlr-postcard__author">Sanjeev Jha | 19 Jan 2022</span> -->
-                    <a href="<?=$circuits['canva']?>" class="rlr-product-card__anchor-title">
+                    <a href="<?=$circuits['canva']?>" target="_blank" class="rlr-product-card__anchor-title">
                       <h2 class="rlr-product-card__title" style="color: orangered;"><?=$circuits['intituler']?></h2>
                     </a>
                     <p><?=$circuits['description']?></p>
                     <div class="rlr-product-card__prices" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <span class="rlr-product-card__from">A Partir de </span>
-                        <span class="rlr-product-card__price p-10" > <mark itemprop="price" style="color: orangered;"><?=$circuits['prix']?></mark><mark itemprop="priceCurrency" style="color: orangered;"> €</mark> </span>
+                        <span class="rlr-product-card__price p-10" > <mark itemprop="price" style="color: orangered;"><?= isset($circuits['prix']) ? $circuits['prix'] : 'Tarif Sur Demande' ?></mark><mark itemprop="priceCurrency" style="color: orangered;"> €</mark> </span>
                     </div>
 
                     <div class="rlr-product-card__footer " style="margin-top: 10px;">

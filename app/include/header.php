@@ -46,17 +46,26 @@
             </li>
             <!-- Dropdown menu 2 -->
             <li class="navigation-item">
-              <a class="navigation-link" href="#"> Transfert </a>
+              <a class="navigation-link" href="#"> Incentive </a>
             </li>
             <!-- Dropdown menu 2 -->
             <li class="navigation-item">
               <a class="navigation-link" href="./contact.php"> Contact </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="?lang=en"> Anglais </a>
+              
+              <a class="navigation-link" href="?lang=en">
+              <img class="image-container" style="width: 20px; height: 20px" src="../assets/images/english.png" >
+              Anglais 
+            </a>
               <!-- -->
-              <a class="navigation-link" href="?lang=fr"> français </a>
 
+            </li>
+            <li class="navigation-item">
+            <a class="navigation-link" href="?lang=fr"> 
+            <img class="image-container" style="width: 20px; height: 20px" src="../assets/images/france_299753.png" >
+              français 
+            </a>
             </li>
           </ul>
          

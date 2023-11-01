@@ -208,7 +208,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
                       <!-- Product card header -->
                       <header class="rlr-product-card__header">
                         <div>
-                          <a href="<?= $programme['canva']?>" class="rlr-product-card__anchor-title">
+                          <a href="<?= $programme['canva']?>" target="_blank" class="rlr-product-card__anchor-title">
                             <h2 class="rlr-product-card__title" itemprop="name"><?= $programme['intituler']?></h2>
                           </a>
                           <div>
@@ -226,7 +226,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
                       <div class="rlr-product-card__details">
                         <div class="rlr-product-card__prices" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                           <span class="rlr-product-card__from">Prix </span>
-                          <span class="rlr-product-card__price"> <mark itemprop="price"><?= $programme['prix']?></mark> <mark itemprop="priceCurrency"> €</mark> </span>
+                          <span class="rlr-product-card__price"> <mark itemprop="price"><?=  $programme['prix'] ?></mark> <mark itemprop="priceCurrency"> €</mark> </span>
                         </div>
                         <div class="rlr-product-card__ratings" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
                           <div class="rlr-review-stars" itemprop="ratingValue" itemscope itemtype="https://schema.org/Product">
@@ -353,7 +353,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
             <?php foreach ($programmecircuits as $cir):?>
               <?php $i++ ?>
               <?php if ($i < 4):?>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-offset="250" data-aos-duration="700">
+            <div class="col-md-6 col-lg-4 " data-aos="fade-up" data-aos-offset="250" data-aos-duration="700">
               <!-- Featured prodcut card -->
               <article class="rlr-product-card rlr-product-card--featured" itemscope itemtype="https://schema.org/Product">
                 <!-- Image -->
@@ -376,15 +376,16 @@ $programmeculturel= $programmeDB->selectOne($culture);
                         </button>
                         <span class="rlr-product-detail-header__helptext rlr-js-helptext"></span>
                       </div>
-                      <a href="<?=$cir['canva']?>"  class="btn rlr-button product-card-buttonrlr-button--medium rlr-button--rounded rlr-button--brand"> Explorez </a>
+                      <a href="<?=$cir['canva']?>" target="_blank" class="btn rlr-button product-card-buttonrlr-button--medium rlr-button--rounded rlr-button--brand"> Explorez </a>
                     </div>
                   </div>
                 </div>
-                <a href="./product-detail-page.html" class="rlr-product-card__anchor rlr-product-card__anchor--featured"></a>
+                <a href="#" class="rlr-product-card__anchor rlr-product-card__anchor--featured"></a>
               </article>
               <!-- Summary -->
               <div class="rlr-product-card--featured__summary">
-                <h4 class="type-h6-semi-bold"><?=$cir['intituler']?></h4>
+                      <a href="<?=$cir['canva']?>" target="_blank" class="btn rlr-button product-card-buttonrlr-button--medium rlr-button--rounded rlr-button--brand"> <?=$cir['intituler']?></a>
+                <h4 class="type-h6-semi-bold"></h4>
                 <p class="type-body"><?=$cir['description']?></p>
               </div>
             </div>
@@ -451,7 +452,40 @@ $programmeculturel= $programmeDB->selectOne($culture);
                 ?>
   
        <!-- Loisir -->
-    
+      
+
+         <!-- Loisir -->
+           
+
+         <?php 
+                        if ($lang==="en") {
+                          echo '<div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
+                          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                          border-radius: 8px; will-change: transform;">
+                           <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                             src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFy2uZ2peI&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                           </iframe>
+                         </div>
+
+                       ';
+                     
+                        }elseif($lang==="fr") {
+                          echo '<div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
+                          padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                          border-radius: 8px; will-change: transform;">
+                           <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                             src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFy2uMI_po&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                           </iframe>
+                         </div>
+                  
+
+                        
+                        ';
+                          
+                        }
+                ?>
+  
+       <!-- Loisir -->
 
 
       <!-- Logo Carousel -->
