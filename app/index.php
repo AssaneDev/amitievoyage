@@ -157,10 +157,19 @@ $programmeculturel= $programmeDB->selectOne($culture);
                 <?php 
                         if ($lang==="en") {
                           echo '<h2 class="rlr-section__title--main">Private Program</h2>';
-                          echo '<span class="rlr-section__title--sub">Visit Senegal according to your plan! Ideal program for your corporate vacation</span>';
+                          echo '<span class="rlr-section__title--sub">
+                          Our travel agency offers an experience
+                           warm and personalized with family or
+                          groups to highlight the
+                           hidden attractions of Senegal and create a
+                          unique travel experience for each customer</span>';
                         }elseif($lang==="fr") {
                           echo '<h2 class="rlr-section__title--main">Programme Privative</h2>';
-                          echo ' <span class="rlr-section__title--sub">Visiter le sénégal selon votre planing! Programme Idéals pour vos vancances d\'entreprise</span>';
+                          echo ' <span class="rlr-section__title--sub">Notre agence de voyages offre une expérience
+                          chaleureuse et personnalisée en famille ou en
+                          groupes pour mettre en valeur les
+                          attractions cachées du Sénégal et créer une
+                          expérience de voyage unique pour chaque client.</span>';
                         }
                       ?>
                 </div>

@@ -42,11 +42,14 @@
               <a class="navigation-link" href="circuit.php">Circuits</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="culturel.php"> Tourisme Culturel </a>
+              <a class="navigation-link" href="culturel.php"> Culturel </a>
             </li>
             <!-- Dropdown menu 2 -->
             <li class="navigation-item">
-              <a class="navigation-link" href="#"> Incentive </a>
+              <a class="navigation-link" target="_blank" href="https://amitievoyage.com/incentive"> Séminaire </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="culturel.php"> A Propos </a>
             </li>
             <!-- Dropdown menu 2 -->
             <li class="navigation-item">
