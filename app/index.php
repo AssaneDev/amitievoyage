@@ -58,13 +58,13 @@ $programmeculturel= $programmeDB->selectOne($culture);
                     <header class="rlr-banner-splide__header">
                      <?php 
                         if ($lang==="en") {
-                          echo '<h2 class="rlr-banner-splide__slogan"> Discover Senegal </h2>';
+                          echo '<h2 class="rlr-banner-splide__slogan px> Discover Senegal </h2>';
                         }elseif($lang==="fr") {
-                          echo '<h2 class="rlr-banner-splide__slogan"> Découvrez Le Sénégal </h2>';
+                          echo '<h2 class="rlr-banner-splide__slogan px" > Découvrez Le Sénégal </h2>';
                         }
                       ?>
                       
-                      <span class="rlr-banner-splide__sub-title">Amitie Voyage</span>
+                      <span class="rlr-banner-splide__sub-title " style="color: orangered;">Amitie Voyage</span>
                     </header>
                     <div class="rlr-banner-splide__content-desc">
                       <div class="rlr-banner-splide__temperature">
@@ -102,10 +102,10 @@ $programmeculturel= $programmeDB->selectOne($culture);
                     <header class="rlr-banner-splide__header">
                     <?php 
                         if ($lang==="en") {
-                          echo '<h2 class="rlr-banner-splide__slogan">Ecology - Discovery - Culture </h2>';
+                          echo '<h2 class="rlr-banner-splide__slogan px">Ecology - Discovery - Culture </h2>';
                           echo '<span class="rlr-banner-splide__sub-title">Total Immersion </span>';
                         }elseif($lang==="fr") {
-                          echo '<h2 class="rlr-banner-splide__slogan">Ecologie - Découverte - Culture </h2>';
+                          echo '<h2 class="rlr-banner-splide__slogan px">Ecologie - Découverte - Culture </h2>';
                           echo '<span class="rlr-banner-splide__sub-title">Immersion Total </span>';
                         }
                       ?>
