@@ -4,6 +4,7 @@
           <!-- Section heading -->
           <div class="rlr-section__title rlr-section__title--centered">
           <?php 
+          $lang === "fr";
                         if ($lang==="en") {
                           echo '<h2 class="rlr-section__title--main">You have a question?</h2>';
                           echo '<span class="rlr-section__title--sub">Our service is available 24/7!</span>';
