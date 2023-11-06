@@ -46,10 +46,10 @@
             </li>
             <!-- Dropdown menu 2 -->
             <li class="navigation-item">
-              <a class="navigation-link" target="_blank" href="https://amitievoyage.com/incentive"> Séminaire </a>
+              <a class="navigation-link" target="_blank" href="https://amitievoyage.com/evens"> Séminaire </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="culturel.php"> A Propos </a>
+              <a class="navigation-link" href="about.php"> A Propos </a>
             </li>
             <!-- Dropdown menu 2 -->
             <li class="navigation-item">
