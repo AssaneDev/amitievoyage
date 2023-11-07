@@ -3,7 +3,7 @@
         <div class="navigation-header">
           <div class="navigation-brand-text">
             <div class="rlr-logo rlr-logo__navbar-brand rlr-logo--default">
-              <a href="./index.php">
+              <a href="/">
                 <img src="./assets/svg/logoa.svg" alt="#" class="" />
               </a>
             </div>
@@ -16,7 +16,7 @@
           <div class="navigation-body-header rlr-navigation__body-header">
             <div class="navigation-brand-text">
               <div class="rlr-logo rlr-logo__navbar-brand rlr-logo--default">
-                <a href="./index.html">
+                <a href="/">
                   <img src="./assets/svg/amitie.png" style="width:200px; height:75px" alt="#" class="" />
                 </a>
               </div>
