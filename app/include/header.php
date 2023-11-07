@@ -3,7 +3,7 @@
         <div class="navigation-header">
           <div class="navigation-brand-text">
             <div class="rlr-logo rlr-logo__navbar-brand rlr-logo--default">
-              <a href="./index.html">
+              <a href="./index.php">
                 <img src="./assets/svg/logoa.svg" alt="#" class="" />
               </a>
             </div>
