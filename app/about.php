@@ -66,21 +66,16 @@ $lang = $_GET['lang'] ?? 'fr';
                 <div class="col-xl-6" data-aos="fade-up" data-aos-offset="250" data-aos-duration="500">
                   <!-- Text card -->
                   <div class="rlr-text-card rlr-text-card--numbered">
-                  <?php 
-                        if ($lang==="en") {
-                          echo '<h2 class="rlr-section__title--main">An experiment put into action</h2>';
-                        }elseif($lang==="fr") {
-                          echo '<h2 class="rlr-section__title--main">Une expérience mise en marche</h2>';
-                        }
-                      ?>
+               
+                 
                     <h5 class="rlr-text-card__title">1</h5>
                     <?php 
                         if ($lang==="en") {
-                          echo ' <p class="rlr-text-card__desc">With around twenty years of experience in Tourism, the idea of establishing this travel agency aims to promote sustainable, equitable, humanitarian and social Tourism.
+                          echo ' <p class="rlr-text-card__desc">With around twenty years of experience in tourism, amitie agency aims to promote sustainable, equitable, humanitarian and social Tourism.
                           Through tailor-made and diversified programs for better customer satisfaction and local populations, a team of professionals accompanies you to discover a country full of contrasts where the legendary hospitality of the population called TERANGA SENEGALAISE is the stamp of an entire people.
                       </p>';
                         }elseif($lang==="fr") {
-                          echo ' <p class="rlr-text-card__desc">Fort d’une vingtaine d’années d’expériences dans le Tourisme l’idée d’assoir cet Agence de voyage vise à promouvoir un Tourisme durable, équitable, humanitaire, et social.
+                          echo ' <p class="rlr-text-card__desc">Fort d’une vingtaine d’années d’expériences dans le tourisme amitie voyage vise à promouvoir un Tourisme durable, équitable, humanitaire, et social.
                           A travers des programmes conçus sur mesure et diversifiés pour une meilleure satisfaction de la clientèle et des populations locales, une équipe de professionnels vous accompagne pour la découverte d’un pays pleins de contrastes ou l’hospitalité légendaire de la population dénommée TERANGA SENEGALAISE est le cachet de tout un peuple.
                       </p>';
                         }

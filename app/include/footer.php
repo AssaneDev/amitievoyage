@@ -120,11 +120,11 @@
             </div>
             <!-- Footer social links -->
             <div class="rlr-footer__legal__row__col">
-              <a href="#">Linkedin</a>
+              <a href="https://www.linkedin.com/in/amitie-voyage-37065529a/">Linkedin</a>
               <span class="separate">/</span>
-              <a href="#">Facebook</a>
+              <a href="https://www.facebook.com/amitievoyagesenegal/">Facebook</a>
               <span class="separate">/</span>
-              <a href="#">Instagram</a>
+              <a href="https://www.instagram.com/amitievoyagesenegal/">Instagram</a>
             </div>
           </div>
           <!-- Footer copyright -->
