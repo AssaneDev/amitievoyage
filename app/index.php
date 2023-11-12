@@ -354,7 +354,18 @@ $programmeculturel= $programmeDB->selectOne($culture);
 
             </div>
             <div class="button-row">
-              <a href="./circuit.php" class="btn rlr-button rlr-button--large rlr-button--rounded rlr-button--brand"> Voir Circuits </a>
+            <?php 
+                        if ($lang==="en") {
+                          echo '<a href="./circuit.php?lang=en" class="btn rlr-button rlr-button--large rlr-button--rounded rlr-button--brand"> Discover </a>';
+
+                       
+                        }elseif($lang==="fr") {
+                          echo '<a href="./circuit.php" class="btn rlr-button rlr-button--large rlr-button--rounded rlr-button--brand"> Voir Circuits </a>';
+                          
+                        }
+                ?>
+
+             
             </div>
           </div>
           <div class="row rlr-featured__cards">
