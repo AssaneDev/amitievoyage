@@ -33,6 +33,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
 <html lang='<?=isset($lang) ? $lang : 'fr'?>'>
   <head>
       <?= require_once 'include/head.php'?>
+      <title>Découverte | Voyage au Sénégal | Circuits & Excursion </title>
       <link rel="stylesheet" href="/styleform/css/index.css">
   </head>
 
