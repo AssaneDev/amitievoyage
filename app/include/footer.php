@@ -27,13 +27,13 @@
                           echo '<h2 class="rlr-support-card__title">For Booking </h2>';
                           echo '<p class="rlr-support-card__subtitle rlr-support-card__text">Send us an Email or Call us!</p>';
                           echo '<p class="rlr-support-card__text">reservez@amitievoyage.fr</p>';
-                          echo '<p class="rlr-support-card__text">(+221)77 646 66 70</p>';
+                          echo '<p class="rlr-support-card__text">33 958 96 63 </p>';
 
                         }elseif($lang==="fr") {
                           echo '<h2 class="rlr-support-card__title">Pour Reservez </h2>';
                           echo '<p class="rlr-support-card__subtitle rlr-support-card__text">Envoyez nous un Email ouAppelez nous!</p>';
                           echo '<p class="rlr-support-card__text">reservez@amitievoyage.sn</p>';
-                          echo '<p class="rlr-support-card__text">(+221)77 646 66 70</p>';
+                          echo '<p class="rlr-support-card__text">33 958 96 63</p>';
                         }
                     ?>
               
@@ -51,13 +51,13 @@
                           echo '<h2 class="rlr-support-card__title">Help &amp; Support </h2>';
                           echo '<p class="rlr-support-card__subtitle rlr-support-card__text">You have any questions contact us here!</p>';
                           echo '<p class="rlr-support-card__text">reservez@amitievoyage.fr</p>';
-                          echo '<p class="rlr-support-card__text">33 957 59 19</p>';
+                          echo '<p class="rlr-support-card__text">33 958 96 63</p>';
 
                         }elseif($lang==="fr") {
                           echo '<h2 class="rlr-support-card__title">Aide &amp; Support </h2>';
                           echo '<p class="rlr-support-card__subtitle rlr-support-card__text">Vous avez des question contactez nous ici !</p>';
                           echo '<p class="rlr-support-card__text">support@amitievoyage.fr</p>';
-                          echo '<p class="rlr-support-card__text">33 957 59 19</p>';
+                          echo '<p class="rlr-support-card__text">33 958 96 63</p>';
                         }
                     ?>
                  
