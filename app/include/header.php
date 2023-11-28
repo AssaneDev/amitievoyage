@@ -1,13 +1,14 @@
+<header>
 <nav id="navigation" class="navigation rlr-navigation default-nav fixed-top">
         <!-- Logo -->
         <div class="navigation-header">
-          <div class="navigation-brand-text">
+           <div class="navigation-brand-text">
             <div class="rlr-logo rlr-logo__navbar-brand rlr-logo--default">
               <a href="/">
                 <img src="./assets/svg/logoa.svg" alt="#" class="" />
               </a>
             </div>
-          </div>
+          </div> 
           <div class="navigation-button-toggler">
             <span class="rlr-sVGIcon"> <i class="rlr-icon-font rlr-icon-font--megamenu flaticon-menu"> </i> </span>
           </div>
@@ -45,9 +46,7 @@
               <a class="navigation-link" href="culturel.php"> Culturel </a>
             </li>
             <!-- Dropdown menu 2 -->
-            <li class="navigation-item">
-              <a class="navigation-link" target="_blank" href="https://amitievoyage.com/evens"> Séminaire </a>
-            </li>
+           
             <li class="navigation-item">
               <a class="navigation-link" href="about.php"> A Propos </a>
             </li>
@@ -74,3 +73,4 @@
          
         </div>
       </nav>
+      </header>

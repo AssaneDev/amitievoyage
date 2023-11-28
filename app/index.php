@@ -39,9 +39,9 @@ $programmeculturel= $programmeDB->selectOne($culture);
 
   <body class="rlr-body">
     <!-- Header -->
-    <header>
+   
         <?= require_once 'include/header.php'?>
-    </header>
+   
     <!-- Main Content -->
     <main id="rlr-main" class="rlr-main--fixed-top">
       <!-- Hero Banner -->
