@@ -33,7 +33,7 @@
                           echo '<h2 class="rlr-support-card__title">Pour Reservez </h2>';
                           echo '<p class="rlr-support-card__subtitle rlr-support-card__text">Envoyez nous un Email ouAppelez nous!</p>';
                           echo '<p class="rlr-support-card__text">reservez@amitievoyage.sn</p>';
-                          echo '<p class="rlr-support-card__text">33 958 96 63</p>';
+                          echo '<p class="rlr-support-card__text">33 999 41 57</p>';
                         }
                     ?>
               
@@ -51,13 +51,13 @@
                           echo '<h2 class="rlr-support-card__title">Help &amp; Support </h2>';
                           echo '<p class="rlr-support-card__subtitle rlr-support-card__text">You have any questions contact us here!</p>';
                           echo '<p class="rlr-support-card__text">reservez@amitievoyage.fr</p>';
-                          echo '<p class="rlr-support-card__text">33 958 96 63</p>';
+                          echo '<p class="rlr-support-card__text">33 999 41 57</p>';
 
                         }elseif($lang==="fr") {
                           echo '<h2 class="rlr-support-card__title">Aide &amp; Support </h2>';
                           echo '<p class="rlr-support-card__subtitle rlr-support-card__text">Vous avez des question contactez nous ici !</p>';
                           echo '<p class="rlr-support-card__text">support@amitievoyage.fr</p>';
-                          echo '<p class="rlr-support-card__text">33 958 96 63</p>';
+                          echo '<p class="rlr-support-card__text">33 999 41 57 </p>';
                         }
                     ?>
                  
