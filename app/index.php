@@ -65,7 +65,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
                         }
                       ?>
                       
-                      <span class="rlr-banner-splide__sub-title " style="color: orangered;">Amitie Voyage</span>
+                      <span class="rlr-banner-splide__sub-title " style="color: white;">Tour - Hébergement - Assistance</span>
                     </header>
                     <div class="rlr-banner-splide__content-desc">
                       <div class="rlr-banner-splide__temperature">
@@ -433,6 +433,7 @@ $programmeculturel= $programmeDB->selectOne($culture);
                              src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwavqaI_Q&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
                            </iframe>
                          </div>
+                         <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFwavqaI_Q&#x2F;view?utm_content=DAFwavqaI_Q&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Green and White Professional Travel Destination Banner Design</a> par Assane Diop
                         
                         ';
                           

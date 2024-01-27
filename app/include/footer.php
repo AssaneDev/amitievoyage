@@ -3,6 +3,11 @@
         <div class="container">
           <!-- Section heading -->
           <div class="rlr-section__title rlr-section__title--centered">
+              <!-- TrustBox widget - Review Collector -->
+              <div class="trustpilot-widget" data-locale="fr-FR" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="65ac4a63cf432fcc1ec6527c" data-style-height="52px" data-style-width="100%">
+             <a href="https://fr.trustpilot.com/review/amitievoyage.fr" target="_blank" rel="noopener">Trustpilot</a>
+              </div>
+              <!-- End TrustBox widget -->
           <?php 
           
                         if ($lang==="en") {
@@ -32,7 +37,7 @@
                         }elseif($lang==="fr") {
                           echo '<h2 class="rlr-support-card__title">Pour Reservez </h2>';
                           echo '<p class="rlr-support-card__subtitle rlr-support-card__text">Envoyez nous un Email ouAppelez nous!</p>';
-                          echo '<p class="rlr-support-card__text">reservez@amitievoyage.sn</p>';
+                          echo '<p class="rlr-support-card__text">reservez@amitievoyage.fr</p>';
                           echo '<p class="rlr-support-card__text">33 999 41 57</p>';
                         }
                     ?>
@@ -46,6 +51,7 @@
                   <div class="rlr-support-card__img-wrapper">
                     <img src="./assets/svg/help-circle.svg" alt="headset" />
                   </div>
+                 
                   <?php 
                         if ($lang==="en") {
                           echo '<h2 class="rlr-support-card__title">Help &amp; Support </h2>';
@@ -73,6 +79,7 @@
       <div class="container">
         <div class="rlr-footer__getintouch">
           <div class="rlr-footer__getintouch_col rlr-footer__getintouch__col--title">
+                 
           <?php 
                         if ($lang==="en") {
                           echo '<h4>You like to travel</h4>';
@@ -117,6 +124,7 @@
                         }
             ?>
               <a href="#">Nos Régles de Voyages</a>
+        
             </div>
             <!-- Footer social links -->
             <div class="rlr-footer__legal__row__col">
